@@ -1,0 +1,81 @@
+/* Your styles should be mobile-first and responsive */
+
+/** 
+  * If you are unclear on how to utilize a mobile-first, responsive technique to write your CSS, here is an example: 
+  *
+  * https://github.com/andreacardybailey/responsive_example/blob/master/styles/responsive-base.css 
+  *
+*/
+
+/* Your styles should be mobile-first and responsive */
+
+/** 
+  * If you are unclear on how to utilize a mobile-first, responsive technique to write your CSS, here is an example: 
+  *
+  * https://github.com/andreacardybailey/responsive_example/blob/master/styles/responsive-base.css 
+  *
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cutive', serif;
+  color: #33383c;
+  background-color: #d2e5c4;
+  background-image: url("paper.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: screen;
+}
+
+header, footer, main {
+  border: 3px solid #adb5bd;
+  text-align: center;
+  margin: 10px 15px;
+  border-radius: 10px;
+}
+
+.quiz-progress, .quiz-score {
+ text-align: right;  
+ margin: 0 5%;
+}  
+ 
+form button, #start-btn, #next-btn, #results-btn, #restart-btn, .btn {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 0;
+  font-size: 14px;
+  background: #495057;
+  color: #fff;
+  margin: 15px 10px;
+}
+
+input {
+	margin: 5px;
+}
+
+.focus:focus{
+  outline: 2px solid black;
+}
+
+.question-container, .start-quiz-container, .question-form-container, .question-feedback {
+  margin: 25px 50px;
+  text-align: left;
+}
+
+
+/* styles for (Desktop) */
+@media all and (min-width: 600px){
+  
+header, footer, main {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 200px;
+  margin-right: 150px;
+}
+
+}
