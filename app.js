@@ -1,9 +1,5 @@
-/**
- * Example store structure
- */
 const store = {
     title: 'Library Fan Quiz',
-  // 5 or more questions are required
     questions: [
     {
       question: 'Who was the Dewey Decimal Classification system named after?',
@@ -61,27 +57,9 @@ const store = {
   score: 0
 };
 
-
-/**
- * 
- * Technical requirements:
- * 
- * Your app should include a render() function, that regenerates the view each time the store is updated. 
- * See your course material and access support for more details.
- *
- * NO additional HTML elements should be added to the index.html file.
- *
- * You may add attributes (classes, ids, etc) to the existing HTML elements, or link stylesheets or additional scripts if necessary
- *
- * SEE BELOW FOR THE CATEGORIES OF THE TYPES OF FUNCTIONS YOU WILL BE CREATING 👇
- * 
- */
-
-
 $('#quiz-title').html(store.title)
 
 /********** TEMPLATE GENERATION FUNCTIONS **********/
-// These functions return HTML templates
 
 //Start quiz template
 function startQuizContainer(){
@@ -109,10 +87,10 @@ function questionContainer(){
       <p>Question ${store.questionNumber + 1} of ${store.questions.length}</p>
     </div>
     <div class='question-form-container'>
-      <form class='question-form'>
+      <form id='question-form'>
         <h3>${store.questions[store.questionNumber].question}</h3>
         ${choices}
-        <button id='submit-btn' class="focus" type='button'>Submit Answer</button>
+        <button id='submit-btn' class="focus" type='submit'>Submit Answer</button>
       </form>
     </div>
     <div class='quiz-score'>
@@ -217,16 +195,8 @@ function endOfQuizContainer() {
 	restartQuizButton();
 }
 
-/********** RENDER FUNCTION(S) **********/
-
-// This function conditionally replaces the contents of the <main> tag based on the state of the store
-// Not sure what this means??
-
-
 
 /********** EVENT HANDLER FUNCTIONS **********/
-
-// These functions handle events (submit, click, etc)
 
 //iterate through questions
 function iterateQuestions(){
@@ -248,7 +218,7 @@ function startButton(){
 
 //submit button function
 function submitButton(){
-  $('main').off('click', '#submit-btn').on('click', '#submit-btn', (event) => {
+  $('main').off('submit', '#question-form').on('submit', '#question-form', (event) => {
   let selectedChoice = $("input[name='option']:checked").val();
   let correctChoice = store.questions[store.questionNumber].correctAnswer
   if (selectedChoice === correctChoice) {
@@ -293,4 +263,4 @@ function handleQuiz(){
 }
 
 //when page loads call `handleQuiz`
-handleQuiz();
+$(handleQuiz);
