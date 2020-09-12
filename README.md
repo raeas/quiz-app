@@ -5,4 +5,4 @@ Added a way to validate whether an answer was submitted.\
 Added jQuery initiaizing function: $(handleQuiz).\
 Removed unnecessary comments.\
 Added link to GitHub pages to README file.\
-Updated title to match header\
+Updated title to match header
