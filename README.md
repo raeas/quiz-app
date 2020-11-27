@@ -6,8 +6,8 @@ This project is an exercise for Thinkful's "Interactive Web Apps" module
 
 ### Objectives
 * Build an interactive quiz app from scratch. This app will give you an opportunity to bring together all of the skills we've covered in this module
-** DOM traversal and manipulation
-** Event listeners
+  * DOM traversal and manipulation
+  * Event listeners
 
 ### Requirements
 * Include a render() function, that conditionally regenerates the view each time the store is updated.
